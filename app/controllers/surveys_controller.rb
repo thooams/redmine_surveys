@@ -7,7 +7,7 @@ class SurveysController < ApplicationController
 
 
   def index
-    @surveys = Survey.find_all_by_project_id(@project)
+    @surveys = Survey.find_all_by_project_id(@project, :order => :created_at)
   end
   
   def new
