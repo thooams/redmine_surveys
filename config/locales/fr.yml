@@ -19,4 +19,5 @@ fr:
   survey_answers: 'Réponses'
   survey_add_another_answer: 'Ajouter une autre réponse'
   survey_comment_hint: "Description pour l'insertion d'un commentaire"
+  survey_remove: 'supprimer'
   
