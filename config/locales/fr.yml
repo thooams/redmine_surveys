@@ -1,0 +1,22 @@
+# French strings go here for Rails i18n
+fr:
+  label_surveys: 'Sondage'
+  label_survey_new: 'Ajouter question au sondage'
+  survey_save_button: 'Enregistrer'
+  survey_save_again_button: 'Enregistrer à nouveau'
+  survey_save_label: ' Sauvegarder votre réponse en cliquant sur le bouton "Enregistrer"'
+  survey_save_again_label: ' Vous pouvez changer votre réponse en appuyant à nouveau sur le bouton'
+  survey_sure_message: 'Assurez-vous de cliquer sur le bouton "Enregistrer" après avoir répondu à chaque question.'
+  survey_thank_you_message: 'Merci pour votre participation au sondage.'
+  survey_created_by: "Créé par %{user} (le %{date})"
+  survey_confirm_delete: 'Êtes-vous sûr de supprimer définitivement cette question?'
+  survey_results_button: 'Voir résultats'
+  survey_download_csv: 'Télécharger (CSV)'
+  survey_allow_edit: " Autoriser l'édition"
+  survey_allow_comments: ' Autoriser les commentaires'
+  survey_multiple_choice: ' Choix multiple'
+  survey_valid_until: " Valide jusqu'à"
+  survey_answers: 'Réponses'
+  survey_add_another_answer: 'Ajouter une autre réponse'
+  survey_comment_hint: "Description pour l'insertion d'un commentaire"
+  
