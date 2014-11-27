@@ -5,7 +5,6 @@ class SurveysController < ApplicationController
   before_filter :find_survey_and_project, :except => :preview
   before_filter :authorize, :except => :preview
 
-
   def index
     @surveys = Survey.find_all_by_project_id(@project, :order => :created_at)
   end
@@ -99,10 +98,10 @@ class SurveysController < ApplicationController
         # remove answers for this user first
         if params[:response].kind_of?(Array) # Multiple choice
           params[:response].each do |r|
-            respond_to(r)
+            respond_to_answer(r)
           end
         else # Single choice
-          respond_to(params[:response])
+          respond_to_answer(params[:response])
         end
       end
       if params[:comment] && !params[:comment].empty? 
@@ -144,7 +143,7 @@ class SurveysController < ApplicationController
     @project = Project.find(params[:project_id] || @survey.project_id)    
   end
   
-  def respond_to(answer_id)
+  def respond_to_answer(answer_id)
     if a = @survey.answers.find(answer_id)
       r = Response.new()
       r.user = User.current
@@ -160,5 +159,5 @@ class SurveysController < ApplicationController
       @survey.answers << answer
     end
   end
-
+  
 end
