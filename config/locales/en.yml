@@ -1,4 +1,22 @@
 # English strings go here for Rails i18n
 en:
   label_surveys: 'Surveys'
-  label_survey_new: 'new survey' 
+  label_survey_new: 'new survey'
+  survey_save_button: 'Save'
+  survey_save_again_button: 'Save again'
+  survey_save_label: ' Please save your answer by pressing "Save".'
+  survey_save_again_label: ' You can change your answer. But after changes press the button again.'
+  survey_sure_message: 'Please make sure that you pressed the "Save" button after answering each question.'
+  survey_thank_you_message: 'Thank you for completing the Survey Questionnaire.'
+  survey_created_by: "created by %{user} on %{date}"
+  survey_confirm_delete: 'Are you sure to delete this Survey?\nThis cannot be undone!'
+  survey_results_button: 'Results'
+  survey_download_csv: 'Download (CSV)'
+  survey_allow_edit: ' Allow Edit'
+  survey_allow_comments: ' Allow Comments'
+  survey_multiple_choice: ' Multiple Choice'
+  survey_valid_until: ' Valid until'
+  survey_answers: 'Answers'
+  survey_add_another_answer: 'Add another answer'
+  survey_comment_hint: 'Comment hint'
+  survey_remove: 'remove'

@@ -4,15 +4,15 @@
   disabled = !survey.is_valid?()
 %> 
 <div class="contextual">
-    <small>created by <%= survey.user.name %> on <%= survey.created_at.to_date %></small>
+    <small><%= t(:survey_created_by, :user => survey.user.name, :date => survey.created_at.strftime("%d.%m.%Y")) %></small>
     <%= link_to_if_authorized(l(:button_edit), {:action => 'edit', :id => survey}, :class => 'icon icon-edit')  %>
-    <%= link_to_if_authorized(l(:button_delete), {:action => 'destroy', :id => survey}, :method => :post, :confirm => "Are you sure to delete this Survey?\nThis cannot be undone!", :class => 'icon icon-del') %>
-    <%= link_to_if(view_results, 'Results', '#', :class => 'icon icon-comment',  
+    <%= link_to_if_authorized(l(:button_delete), {:action => 'destroy', :id => survey}, :method => :post, :confirm => t(:survey_confirm_delete), :class => 'icon icon-del') %>
+    <%= link_to_if(view_results, t(:survey_results_button), '#', :class => 'icon icon-comment',  
       :onclick => "jQuery('##{dom_id(survey, :results)}').toggle(); jQuery('##{dom_id(survey)}').toggle(); return false;") {} %>    
-    <%= link_to_if_authorized('Download', {:action => 'download', :id => survey},  :class => 'icon icon-file text-plain') %>    
+    <%= link_to_if_authorized(t(:survey_download_csv), {:action => 'download', :id => survey},  :class => 'icon icon-file text-plain') %>    
 </div>
 
-<h2><%= survey.subject %></h2>
+<h3><%= survey.subject %></h3>
 
 <div class="wiki">
 <%= textilizable(survey.content) %>
@@ -45,8 +45,8 @@
     </table>
     <p>
     <% unless disabled %>        
-       <%= submit_tag responded ? 'Save again' : 'Save'%>
-       <span style="color: red;"><%= responded ? ' You can change your answer. But after changes press the button again.' : ' Please save your answer by pressing "Save".' %></span>
+       <%= submit_tag responded ? t(:survey_save_again_button) : t(:survey_save_button) %>
+       <span style="color: red;"><%= responded ? t(:survey_save_again_label) : t(:survey_save_label) %></span>
     <% end %>
     </div>
         
